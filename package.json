@@ -20,11 +20,9 @@
     "@types/node": "^22.10.1",
     "@types/react": "^16.14.0",
     "@types/react-dom": "^16.9.24",
+    "cross-env": "^7.0.3",
     "esbuild": "^0.24.0",
     "esbuild-plugin-inline-import": "^1.1.0",
     "tsx": "^4.19.2"
-  },
-  "dependencies": {
-    "cross-env": "^7.0.3"
   }
 }
