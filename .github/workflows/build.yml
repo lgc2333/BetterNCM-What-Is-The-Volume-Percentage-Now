@@ -22,10 +22,10 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: Install Yarn
+      - name: Install Corepack
         run: |-
-          npm install yarn -g
-          yarn set version berry
+          npm install -g corepack
+          corepack enable
 
       - name: Install Node dependencies
         run: yarn
