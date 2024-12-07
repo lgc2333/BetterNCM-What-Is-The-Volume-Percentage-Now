@@ -1,23 +1,30 @@
 {
-  "name": "better-ncm-example",
+  "name": "better-ncm-what-is-the-volume-percentage-now",
   "packageManager": "yarn@4.5.3",
   "private": true,
   "version": "0",
   "description": "",
   "main": "index.js",
-  "repository": "https://github.com/lgc2333/BetterNCM-Example",
+  "repository": "https://github.com/lgc2333/BetterNCM-What-Is-The-Volume-Percentage-Now",
   "author": "student_2333 <lgc2333@126.com>",
   "license": "MIT",
   "scripts": {
-    "build:dev": "esbuild ./src/main.ts --bundle --outdir=dist --sourcemap=inline --target=chrome91",
-    "build:watch": "esbuild ./src/main.ts --bundle --outdir=dist --sourcemap=inline --target=chrome91 --watch",
-    "build": "esbuild ./src/main.ts --bundle --minify --outdir=dist --target=chrome91",
+    "build:js:dev": "cross-env NODE_ENV=development tsx ./scripts/build.ts",
+    "build:js": "tsx ./scripts/build.ts",
+    "build:dev": "yarn build:js:dev && tsx ../../scripts/post-build.ts",
+    "build": "yarn build:js && tsx ../../scripts/post-build.ts",
+    "apply": "tsx ../../scripts/apply.ts",
     "analyze": "esbuild --bundle ./src/main.ts --outdir=dist --minify --analyze=verbose"
   },
   "devDependencies": {
     "@types/node": "^22.10.1",
     "@types/react": "^16.14.0",
     "@types/react-dom": "^16.9.24",
-    "esbuild": "^0.24.0"
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-inline-import": "^1.1.0",
+    "tsx": "^4.19.2"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
   }
 }
