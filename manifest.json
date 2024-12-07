@@ -1,0 +1,14 @@
+{
+  "manifest_version": 1,
+  "name": "Example",
+  "slug": "example",
+  "version": "0.1.0",
+  "author": "student_2333",
+  "description": "逸一时 误一世 逸久忆旧罢一龄",
+  "betterncm_version": ">=1.0.0",
+  "preview": "preview.png",
+  "ncm3-compatible": false,
+  "injects": {
+    "Main": [{ "file": "./main.js" }]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "better-ncm-example",
+  "packageManager": "yarn@4.5.3",
+  "private": true,
+  "version": "0",
+  "description": "",
+  "main": "index.js",
+  "repository": "https://github.com/lgc2333/BetterNCM-Example",
+  "author": "student_2333 <lgc2333@126.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:dev": "esbuild ./src/main.ts --bundle --outdir=dist --sourcemap=inline --target=chrome91",
+    "build:watch": "esbuild ./src/main.ts --bundle --outdir=dist --sourcemap=inline --target=chrome91 --watch",
+    "build": "esbuild ./src/main.ts --bundle --minify --outdir=dist --target=chrome91",
+    "analyze": "esbuild --bundle ./src/main.ts --outdir=dist --minify --analyze=verbose"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/react": "^16.14.0",
+    "@types/react-dom": "^16.9.24",
+    "esbuild": "^0.24.0"
+  }
+}
