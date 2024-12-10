@@ -20,6 +20,19 @@ jobs:
           repository: lgc2333/BetterNCM-Workspace
           submodules: true
 
+      - name: Get package folder name
+        env:
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          FOLDER_NAME=$(echo "${REPO_NAME}" | sed 's/^BetterNCM-//')
+          echo "FOLDER_NAME=${FOLDER_NAME}"
+          echo "FOLDER_NAME=${FOLDER_NAME}" >> $GITHUB_ENV
+
+      - name: Update current package submodule
+        run: |-
+          git switch ${{ github.ref_name }}
+          git pull
+
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
@@ -31,14 +44,6 @@ jobs:
 
       - name: Install Node dependencies
         run: yarn
-
-      - name: Get package folder name
-        env:
-          REPO_NAME: ${{ github.event.repository.name }}
-        run: |
-          FOLDER_NAME=$(echo "${REPO_NAME}" | sed 's/^BetterNCM-//')
-          echo "FOLDER_NAME=${FOLDER_NAME}"
-          echo "FOLDER_NAME=${FOLDER_NAME}" >> $GITHUB_ENV
 
       - name: Build
         run: |-
