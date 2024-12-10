@@ -30,6 +30,7 @@ jobs:
 
       - name: Update current package submodule
         run: |-
+          cd packages/${FOLDER_NAME}
           git switch ${{ github.ref_name }}
           git pull
 
