@@ -1,13 +1,13 @@
 {
   "name": "better-ncm-what-is-the-volume-percentage-now",
-  "packageManager": "pnpm@11.23.0+sha512.f00082e5b283a199b74e079da28d155c008fe232f44c8a06ea7ddfa014ecf719fc362f790ecc67b28106ddac2afb24c49a9a079159da560b2ce7d1e98efd11af",
-  "private": true,
   "version": "0",
+  "private": true,
+  "packageManager": "pnpm@11.23.0+sha512.f00082e5b283a199b74e079da28d155c008fe232f44c8a06ea7ddfa014ecf719fc362f790ecc67b28106ddac2afb24c49a9a079159da560b2ce7d1e98efd11af",
   "description": "",
-  "main": "index.js",
-  "repository": "https://github.com/lgc2333/BetterNCM-What-Is-The-Volume-Percentage-Now",
   "author": "LgCuwukii <lgc2333@126.com>",
   "license": "MIT",
+  "repository": "https://github.com/lgc2333/BetterNCM-What-Is-The-Volume-Percentage-Now",
+  "main": "index.js",
   "scripts": {
     "build:js:dev": "cross-env NODE_ENV=development tsx ./scripts/build.ts",
     "build:js": "tsx ./scripts/build.ts",

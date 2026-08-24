@@ -1,3 +1,4 @@
+import process from 'node:process'
 import esbuild from 'esbuild'
 import inlineImportPlugin from 'esbuild-plugin-inline-import'
 
