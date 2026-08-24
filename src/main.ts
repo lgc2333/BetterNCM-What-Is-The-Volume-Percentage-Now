@@ -1,7 +1,5 @@
 import styles from 'inline:./main.css'
 
-import type {} from 'esbuild-plugin-inline-import'
-
 function getBarVol(barElem: HTMLDivElement) {
   return barElem.style.height.replace('%', '').split('.')[0]
 }
