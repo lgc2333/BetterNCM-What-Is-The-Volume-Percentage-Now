@@ -14,7 +14,8 @@
     "build:dev": "pnpm run build:js:dev && tsx ../../scripts/post-build.ts",
     "build": "pnpm run build:js && tsx ../../scripts/post-build.ts",
     "apply": "tsx ../../scripts/apply.ts",
-    "analyze": "esbuild --bundle ./src/main.ts --outdir=dist --minify --analyze=verbose"
+    "analyze": "esbuild --bundle ./src/main.ts --outdir=dist --minify --analyze=verbose",
+    "check": "tsc -b --noEmit"
   },
   "devDependencies": {
     "@types/node": "catalog:",
