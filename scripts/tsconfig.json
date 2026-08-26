@@ -2,6 +2,6 @@
   "extends": "../../../tsconfig.base",
   "compilerOptions": {
     "types": ["node"],
-    "outDir": "dist"
+    "noEmit": true
   }
 }
