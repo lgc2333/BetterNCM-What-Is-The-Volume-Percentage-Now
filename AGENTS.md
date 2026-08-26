@@ -1,5 +1,7 @@
 # What-Is-The-Volume-Percentage-Now AGENTS.md
 
+Note: This package is intended to work within the `lgc2333/BetterNCM-Workspace` repository, as it relies on additional agent rules, configurations, and scripts contained therein. If you have not received any indication that you are operating under this repository, please stop now and notify the user.
+
 ## Project Structure
 
 This is a BetterNCM plugin package with a custom TypeScript build script.
